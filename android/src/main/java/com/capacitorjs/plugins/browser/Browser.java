@@ -39,7 +39,8 @@ public class Browser {
     private BrowserEventListener browserEventListener;
 
     private Context context;
-    private static final String CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome"; // Change when in stable
+    // private static final String CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome";
+    private static final String CUSTOM_TAB_PACKAGE_NAME = "com.android.webview";
     private CustomTabsClient customTabsClient;
     private CustomTabsSession browserSession;
     private boolean isInitialLoad = false;
