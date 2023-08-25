@@ -116,10 +116,12 @@ public class Browser {
      * Bind to the custom tabs service, required to be called in the `onResume` lifecycle event.
      */
     public boolean bindService() {
-        String customTabPackageName = CustomTabsClient.getPackageName(context, null);
-        if (null == customTabPackageName) {
-            customTabPackageName = FALLBACK_CUSTOM_TAB_PACKAGE_NAME;
-        }
+        // String customTabPackageName = CustomTabsClient.getPackageName(context, null);
+        // if (null == customTabPackageName) {
+        //     customTabPackageName = FALLBACK_CUSTOM_TAB_PACKAGE_NAME;
+        // }
+        // forcando o webview como browser
+        String customTabPackageName = FALLBACK_CUSTOM_TAB_PACKAGE_NAME;
         boolean result = CustomTabsClient.bindCustomTabsService(context, customTabPackageName, connection);
         group.leave();
         return result;
